@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página do Cliente</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à Nossa Loja</h1>
+    </header>
+    
+    <section id="galeria">
+        <h2>Nossas Imagens</h2>
+        <div class="imagens">
+            <img src="imagem1.jpg" alt="Imagem 1">
+            <img src="imagem2.jpg" alt="Imagem 2">
+            <img src="imagem3.jpg" alt="Imagem 3">
+        </div>
+    </section>
+    
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <form id="formContato">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="celular">Celular:</label>
+            <input type="tel" id="celular" name="celular" required>
+
+            <label for="endereco">Endereço (Opcional):</label>
+            <input type="text" id="endereco" name="endereco">
+
+            <label for="cpf">CPF (Opcional):</label>
+            <input type="text" id="cpf" name="cpf">
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <a id="whatsapp" href="https://wa.me/5511992997202" target="_blank">Fale Conosco no WhatsApp</a>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
