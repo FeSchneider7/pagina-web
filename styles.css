@@ -6,61 +6,59 @@ body {
 }
 
 header {
-    background-color: #007bff;
+    background-color: #4f7cac;
     color: white;
     padding: 20px;
 }
 
-#galeria .imagens {
+#menu {
     display: flex;
     justify-content: center;
     gap: 10px;
+    margin: 20px 0;
+}
+
+.menu-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.menu-btn:hover {
+    background-color: rgba(194, 194, 50, 0.795);
+    color: black;
+}
+
+#produtos {
+    display: none;
+    margin-top: 20px;
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-content: center;
     padding: 20px;
 }
 
-.imagens img {
-    width: 200px;
+.produto {
+    text-align: center;
+}
+
+.produto img {
+    width: 150px;
     height: auto;
-    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: auto;
+.produto img:hover {
+    transform: scale(1.1);
 }
 
-input, textarea {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-#whatsapp {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #25D366;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-#whatsapp:hover {
-    background-color: #1EBE5D;
+.hidden {
+    display: none;
 }

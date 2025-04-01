@@ -11,6 +11,12 @@
         <h1>Bem-vindo à Nossa Loja</h1>
     </header>
     
+    <nav id="menu">
+        <button class="menu-btn" onclick="mostrarProdutos('categoria1')">Categoria 1</button>
+        <button class="menu-btn" onclick="mostrarProdutos('categoria2')">Categoria 2</button>
+        <button class="menu-btn" onclick="mostrarProdutos('categoria3')">Categoria 3</button>
+    </nav>
+    
     <section id="galeria">
         <h2>Nossas Imagens</h2>
         <div class="imagens">
@@ -18,6 +24,11 @@
             <img src="imagem2.jpg" alt="Imagem 2">
             <img src="imagem3.jpg" alt="Imagem 3">
         </div>
+    </section>
+    
+    <section id="produtos" class="hidden">
+        <h2>Produtos</h2>
+        <div id="produtos-container" class="produtos-grid"></div>
     </section>
     
     <section id="contato">

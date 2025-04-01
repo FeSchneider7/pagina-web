@@ -1,15 +1,39 @@
-document.getElementById('formContato').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const nome = document.getElementById('nome').value;
-    const celular = document.getElementById('celular').value;
-    const endereco = document.getElementById('endereco').value;
-    const cpf = document.getElementById('cpf').value;
-    const mensagem = document.getElementById('mensagem').value;
+const produtos = {
+    categoria1: [
+        { nome: "Produto 1", img: "https://via.placeholder.com/150" },
+        { nome: "Produto 2", img: "https://via.placeholder.com/150" },
+        { nome: "Produto 3", img: "https://via.placeholder.com/150" },
+        { nome: "Produto 4", img: "https://via.placeholder.com/150" },
+        { nome: "Produto 5", img: "https://via.placeholder.com/150" },
+        { nome: "Produto 6", img: "https://via.placeholder.com/150" },
+        { nome: "Produto 7", img: "https://via.placeholder.com/150" },
+        { nome: "Produto 8", img: "https://via.placeholder.com/150" }
+    ],
+    categoria2: [
+        { nome: "Produto A", img: "https://via.placeholder.com/150" },
+        { nome: "Produto B", img: "https://via.placeholder.com/150" },
+        { nome: "Produto C", img: "https://via.placeholder.com/150" },
+        { nome: "Produto D", img: "https://via.placeholder.com/150" },
+        { nome: "Produto E", img: "https://via.placeholder.com/150" },
+        { nome: "Produto F", img: "https://via.placeholder.com/150" },
+        { nome: "Produto G", img: "https://via.placeholder.com/150" },
+        { nome: "Produto H", img: "https://via.placeholder.com/150" }
+    ]
+};
+
+function mostrarProdutos(categoria) {
+    const produtosContainer = document.getElementById('produtos-container');
+    produtosContainer.innerHTML = '';
     
-    if (nome && celular && mensagem) {
-        const whatsappMessage = `https://wa.me/5511992997202?text=${encodeURIComponent(`Nome: ${nome}\nCelular: ${celular}\nEndereço: ${endereco}\nCPF: ${cpf}\nMensagem: ${mensagem}`)}`;
-        window.open(whatsappMessage, '_blank');
-    } else {
-        alert('Por favor, preencha os campos obrigatórios!');
-    }
-});
+    produtos[categoria].forEach(produto => {
+        const produtoDiv = document.createElement('div');
+        produtoDiv.classList.add('produto');
+        produtoDiv.innerHTML = `
+            <img src="${produto.img}" alt="${produto.nome}">
+            <p>${produto.nome}</p>
+        `;
+        produtosContainer.appendChild(produtoDiv);
+    });
+    
+    document.getElementById('produtos').style.display = 'block';
+}
